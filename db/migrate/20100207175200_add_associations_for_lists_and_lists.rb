@@ -1,12 +1,13 @@
 class AddAssociationsForListsAndLists < ActiveRecord::Migration
   def self.up
-    create_table :table_name, :force => true do |t|
-      t.
+    create_table :list_to_list, :id => false do |t|
+      t.integer :right_list
+      t.integer :left_list
       t.timestamps
     end
   end
 
   def self.down
-    drop_table :table_name
+    drop_table :list_to_list
   end
 end
