@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20100207175200) do
   end
 
   create_table "list_to_list", :id => false, :force => true do |t|
-    t.integer  "right_list"
-    t.integer  "left_list"
+    t.integer  "right_list_id"
+    t.integer  "left_list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
