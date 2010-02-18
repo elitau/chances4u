@@ -25,8 +25,8 @@
       <div id="topnav" role="contentinfo">
         <a href="#">Login</a> | <a href="#">Contact</a> | <a href="#">Imprint</a>
       </div>
-      <h1>A simple  sample page</h1>
-      <h2>This sample page demonstrates  YAML's flexible grids. Try scaling ... </h2>
+      <h1>Studienberatung mit Weitblick </h1>
+      <h2>Die etwas andere Berufsberatung, auch für zukünftige Auszubildende </h2>
       <div class="subcolumns">
         <div class="c33l">
           <div id="nav" class="subcl" role="navigation">
@@ -40,8 +40,11 @@
         </div>
         <div class="c33l" role="complementary">
           <div class="subc">
-            <h6>And another box </h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  ex ea commodo consequat laboris nisi ut aliquip.</p>
+            <h6>Neuer Eintrag </h6>
+            <p>Beschreibe deine Berufs- oder Studiensituation und helfe anderen bei ihrer Berufswahl.</p>
+            <p>
+              <%= link_to 'Neuer Eintrag', new_entry_path %>
+            </p>
           </div>
         </div>
         <div class="c33r"  role="complementary">
@@ -55,7 +58,7 @@
     <div id="main">
       <div class="subcolumns">
         <div class="c66l" role="main">
-          <div class="subcl maincontent"><img src="/images/test.jpg" alt="Test" class="float_left" />
+          <div class="subcl maincontent">
             <%= yield %>
             <hr/>
             <div class="subcolumns">
@@ -76,13 +79,13 @@
         </div>
         <div class="c33r" role="complementary">
           <div class="subcr">
-            <h3>A <em>Simple</em> Sidebar </h3>
-            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices  posuere cubilia Curae; Cras ornare mattis nunc. Mauris venenatis, pede  sed aliquet vehicula, lectus tellus pulvinar neque, non cursus sem nisi  vel augue.</p>
-            <p>Mauris a lectus. Aliquam erat volutpat. Phasellus  ultrices mi a sapien. Nunc rutrum egestas lorem. Duis ac sem sagittis  elit tincidunt gravida. Mauris a lectus. Aliquam erat volutpat.  Phasellus ultrices mi a sapien. Nunc rutrum egestas lorem. Duis ac sem  sagittis elit tincidunt gravida.</p>
-            <p class="note">Vestibulum  ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia  Curae; Cras ornare mattis nunc. Mauris venenatis, pede sed aliquet  vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue.</p>
-            <h3>Incremental leading</h3>
-            <p class="small">Vestibulum ante ipsum  primis in faucibus orci luctus vestibulum ante ipsum primis in faucibus  orci luctus et ultrices posuere cubilia Curae; Cras ornare mattis nunc.  Mauris venenatis, pede sed aliquet vehicula, lectus tellus pulvinar  neque, non cursus sem nisi vel augue. sed aliquet vehicula, lectus  tellus.</p>
-            <p class="small">Vestibulum ante ipsum primis in  faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare  mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus tellus  pulvinar neque, non cursus sem nisi vel augue. sed aliquet vehicula,  lectus tellus pulvinar neque, non cursus sem nisi vel augue. ipsum  primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras  ornare mattis nunc. Mauris venenatis, pede sed aliquet vehicula, lectus  tellus pulvinar neque, non cursus sem nisi vel augue. sed aliquet  vehicula, lectus tellus pulvinar neque, non cursus sem nisi vel augue</p>
+            <h3>√úber <em>weitblick e.V.</em></h3>
+            <p>
+              Weitblick e.V. ist eine in Februar 2008 in Münster gegründete Studenteninitiative, die sich für einen weltweit gerechten Zugang zu Bildung engagiert, um soziale Verantwortung zu übernehmen und einen Beitrag zu einer nachhaltigen Entwicklungshilfe zu leisten.
+            </p>
+            <p>
+              Der gemeinnützige Verein ist nicht als Karriere-Netzwerk gedacht, stattdessen engagieren sich Studierende ehrenamtlich und eigenverantwortlich für lokale und internationale Hilfsprojekte. Hierzu geh√∂ren die Einschulung von Straßenkindern, die Vergabe von Mikrokrediten oder das Münsteraner Pilotprojekt, der Schulbau in Benin, Westafrika.
+            </p>
           </div>
         </div>
       </div>

@@ -1,23 +1,8 @@
-<h1>Listing lists</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @lists.each do |list| %>
-  <tr>
-    <td><%= list.title %></td>
-    <td><%= link_to 'Show', list %></td>
-    <td><%= link_to 'Edit', edit_list_path(list) %></td>
-    <td><%= link_to 'Destroy', list, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<h2>Neueste Einträge</h2>
+<% @entries.each do |entry| %>
+  <h4><%= entry.title %></h4>
+  <p><%= truncate(entry.body) %></p>
+  <p>Eingeordnet in : <%= entry.lists.to_s %></p>
+  <p><%= link_to 'Weiterlesen', entry %></p>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New list', new_list_path %>
