@@ -1,0 +1,51 @@
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :study_path %><br />
+    <%= f.text_field :study_path %>
+  </div>
+  <div class="field">
+    <%= f.label :study_place %><br />
+    <%= f.text_field :study_place %>
+  </div>
+  <div class="field">
+    <%= f.label :study_path_since %><br />
+    <%= f.date_select :study_path_since %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_file_name %><br />
+    <%= f.text_field :avatar_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_content_type %><br />
+    <%= f.text_field :avatar_content_type %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_file_size %><br />
+    <%= f.text_field :avatar_file_size %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_updated_at %><br />
+    <%= f.datetime_select :avatar_updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<h1><%= t(:login) %></h1>
+
+<% form_for(@user_session) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :username, t(:username) %>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password, t(:password) %>
+    <%= f.password_field :password %>
+  </p>
+  
+  <div class="actions">
+    <%= f.submit "Login" %>
+  </div>
+<% end %>

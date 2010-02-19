@@ -1,0 +1,53 @@
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @user.password %>
+</p>
+
+<p>
+  <b>Study path:</b>
+  <%= @user.study_path %>
+</p>
+
+<p>
+  <b>Study place:</b>
+  <%= @user.study_place %>
+</p>
+
+<p>
+  <b>Study path since:</b>
+  <%= @user.study_path_since %>
+</p>
+
+<p>
+  <b>Avatar file name:</b>
+  <%= @user.avatar_file_name %>
+</p>
+
+<p>
+  <b>Avatar content type:</b>
+  <%= @user.avatar_content_type %>
+</p>
+
+<p>
+  <b>Avatar file size:</b>
+  <%= @user.avatar_file_size %>
+</p>
+
+<p>
+  <b>Avatar updated at:</b>
+  <%= @user.avatar_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

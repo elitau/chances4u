@@ -24,12 +24,19 @@
     
     <div id="header" role="banner">
       <div id="topnav" role="contentinfo">
-        <a href="#">Login</a> | <a href="#">Contact</a> | <a href="#">Imprint</a>
+        <%- if current_user -%>
+          <%= link_to t(:edit_profile), edit_user_url(:current) %> | 
+          <%= link_to t(:logout), logout_url %> | 
+        <%- else -%>
+          <%= link_to t(:login), login_url %> | 
+          <%= link_to t(:register), new_user_url %> | 
+        <%- end -%>
+        <a href="#">Contact</a> | <a href="#">Imprint</a>
       </div>
       <%- link_to root_url do -%>
         <h1>Studienberatung mit Weitblick </h1>
       <%- end -%>
-      <h2>Die etwas andere Berufsberatung, auch für zukünftige Auszubildende </h2>
+      <h2 class="notice"><%= notice || "Die etwas andere Berufsberatung, auch für zukünftige Auszubildende"%> </h2>
     </div>
     <%= yield(:top_columns) %>
     <div id="main">
