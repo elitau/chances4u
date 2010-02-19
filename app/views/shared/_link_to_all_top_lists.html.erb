@@ -1,12 +1,14 @@
-<%- content_tag(:span, :class => "") do-%>
-  <%- top_list = list -%>
-  <%- while(!top_list.top_lists.blank?) -%>
-    <%- top_list = list.top_lists.first -%>
-    <%- content_tag_for(:span, top_list, :class => "top_list") do -%>
-      <%= link_to top_list.title, top_list %> > 
-    <%- end -%> 
-  <%- end -%>
-  <%- content_tag_for(:span, list) do -%>
-    <%= link_to list.title, list %>
+<%- if list -%>
+  <%- content_tag(:span, :class => "") do-%>
+    <%- top_list = list -%>
+    <%- while(!top_list.try(:top_lists).blank?) -%>
+      <%- top_list = list.top_lists.first -%>
+      <%- content_tag_for(:span, top_list, :class => "top_list") do -%>
+        <%= link_to top_list.title, top_list %> > 
+      <%- end -%> 
+    <%- end -%>
+    <%- content_tag_for(:span, list) do -%>
+      <%= link_to list.title, list %>
+    <%- end -%>
   <%- end -%>
 <%- end -%>
