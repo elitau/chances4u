@@ -14,30 +14,30 @@ class EntriesControllerTest < ActionController::TestCase
 
   test "should create entry" do
     assert_difference('Entry.count') do
-      post :create, :entry => entries(:one).attributes
+      post :create, :entry => entries(:biologie).attributes
     end
 
     assert_redirected_to entry_path(assigns(:entry))
   end
 
   test "should show entry" do
-    get :show, :id => entries(:one).to_param
+    get :show, :id => entries(:biologie).to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => entries(:one).to_param
+    get :edit, :id => entries(:biologie).to_param
     assert_response :success
   end
 
   test "should update entry" do
-    put :update, :id => entries(:one).to_param, :entry => entries(:one).attributes
+    put :update, :id => entries(:biologie).to_param, :entry => entries(:biologie).attributes
     assert_redirected_to entry_path(assigns(:entry))
   end
 
   test "should destroy entry" do
     assert_difference('Entry.count', -1) do
-      delete :destroy, :id => entries(:one).to_param
+      delete :destroy, :id => entries(:biologie).to_param
     end
 
     assert_redirected_to entries_path

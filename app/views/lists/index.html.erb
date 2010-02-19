@@ -1,8 +1,6 @@
-<h2>Neueste Einträge</h2>
-<% @entries.each do |entry| %>
-  <h4><%= entry.title %></h4>
-  <p><%= truncate(entry.body) %></p>
-  <p>Eingeordnet in : <%= entry.lists.to_s %></p>
-  <p><%= link_to 'Weiterlesen', entry %></p>
+<h2>Alle Kategorien</h2>
+<% @lists.each do |list| %>
+  <h4><%= list.title %></h4>
+  <p>Eingeordnet in : <%= list.top_lists.first.try(:title) %></p>
 <% end %>
 

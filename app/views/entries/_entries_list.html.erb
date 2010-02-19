@@ -1,0 +1,15 @@
+<% @entries.each do |entry| %>
+  <%- link_to entry do -%>
+    <h4><%= entry.title %></h4>
+    <p>
+      <%= entry.body %>
+    </p>
+  <%- end -%>
+  <p>
+    <br />
+    Listed in: <%= render :partial => "shared/link_to_all_top_lists", :locals => {:list => entry.lists.first} %>
+  </p>
+  <%- unless @entries.last == entry -%>
+    <hr />
+  <%- end -%>
+<% end %>

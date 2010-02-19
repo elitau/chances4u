@@ -8,6 +8,11 @@
   <%= @entry.body %>
 </p>
 
+<p>
+  <b>Lists:</b>
+  <%= @entry.lists.map(&:title).join(", ") %>
+</p>
+
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>

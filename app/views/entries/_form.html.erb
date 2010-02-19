@@ -9,6 +9,11 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+  
+  <div class="field">
+    <%= f.label :list_ids %>
+    <%= f.select :list_ids, List.all.collect{|l| [l.title, l.id]}, {}, :multiple => true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

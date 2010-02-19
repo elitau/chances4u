@@ -21,79 +21,34 @@
 
 <div class="page_margins">
   <div class="page">
+    
     <div id="header" role="banner">
       <div id="topnav" role="contentinfo">
         <a href="#">Login</a> | <a href="#">Contact</a> | <a href="#">Imprint</a>
       </div>
-      <h1>Studienberatung mit Weitblick </h1>
+      <%- link_to root_url do -%>
+        <h1>Studienberatung mit Weitblick </h1>
+      <%- end -%>
       <h2>Die etwas andere Berufsberatung, auch für zukünftige Auszubildende </h2>
-      <div class="subcolumns">
-        <div class="c33l">
-          <div id="nav" class="subcl" role="navigation">
-            <h6>Example Navigation </h6>
-            <ul>
-              <li><a href="../index.html">Table Of Contents</a></li>
-              <li><a href="equal_height_boxes.html">Next Example</a></li>
-              <li><a href="flexible_grids.html">Previous Example</a>   </li>
-            </ul>
-          </div>
-        </div>
-        <div class="c33l" role="complementary">
-          <div class="subc">
-            <h6>Neuer Eintrag </h6>
-            <p>Beschreibe deine Berufs- oder Studiensituation und helfe anderen bei ihrer Berufswahl.</p>
-            <p>
-              <%= link_to 'Neuer Eintrag', new_entry_path %>
-            </p>
-          </div>
-        </div>
-        <div class="c33r"  role="complementary">
-          <div class="subcr">
-            <h6>This box is aligned with the sidebar </h6>
-            <p class="notice"><%= notice || "Notice box"%></p>
-          </div>
-        </div>
-      </div>
     </div>
+    <%= yield(:top_columns) %>
     <div id="main">
       <div class="subcolumns">
-        <div class="c66l" role="main">
+        <div class="c100l" role="main">
           <div class="subcl maincontent">
             <%= yield %>
-            <hr/>
-            <div class="subcolumns">
-              <div class="c50l">
-                <div class="subcl">
-                  <h6>This is a nested column</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
-              </div>
-              <div class="c50r">
-                <div class="subcr">
-                  <h6>This is another nested column </h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="c33r" role="complementary">
-          <div class="subcr">
-            <h3>√úber <em>weitblick e.V.</em></h3>
-            <p>
-              Weitblick e.V. ist eine in Februar 2008 in Münster gegründete Studenteninitiative, die sich für einen weltweit gerechten Zugang zu Bildung engagiert, um soziale Verantwortung zu übernehmen und einen Beitrag zu einer nachhaltigen Entwicklungshilfe zu leisten.
-            </p>
-            <p>
-              Der gemeinnützige Verein ist nicht als Karriere-Netzwerk gedacht, stattdessen engagieren sich Studierende ehrenamtlich und eigenverantwortlich für lokale und internationale Hilfsprojekte. Hierzu geh√∂ren die Einschulung von Straßenkindern, die Vergabe von Mikrokrediten oder das Münsteraner Pilotprojekt, der Schulbau in Benin, Westafrika.
-            </p>
           </div>
         </div>
       </div>
     </div>
     <div id="footer" role="contentinfo">
-      <h2>Open your mind for flexibility! There is a world far beyond simple column-based web design ...</h2>
-      <p>Layout inspired <a href="http://www.yaml.de"></a>by <a href="http://files.bjorkoy.com/blueprint/tests/parts/sample.html">sample website</a> from <a href="http://code.google.com/p/blueprintcss/">Blueprint CSS</a><br />
-        Rebuilt as an example, using grid elements of <a href="http://www.yaml.de/en/">YAML</a></p>
+      <!-- <h2>Open your mind for flexibility! There is a world far beyond simple column-based web design ...</h2> -->
+      <p>Layout inspired <a href="http://www.yaml.de"></a>by <a href="http://files.bjorkoy.com/blueprint/tests/parts/sample.html">sample website</a> from <a href="http://code.google.com/p/blueprintcss/">Blueprint CSS</a>
+        <br />
+        Rebuilt as an example, using grid elements of <a href="http://www.yaml.de/en/">YAML</a>
+        <br />
+        Build by <%= link_to "Medienwerkstatt neueZone", "http://werkstatt.neuezone.net" %>
+      </p>
     </div>
   </div>
 </div>
