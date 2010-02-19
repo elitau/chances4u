@@ -1,6 +1,6 @@
 <%- content_tag(:span, :class => "") do-%>
   <%- top_list = list -%>
-  <%- while(!top_list.top_lists.blank?) -%>
+  <%- while(!top_list.try(:top_lists).blank?) -%>
     <%- top_list = list.top_lists.first -%>
     <%- content_tag_for(:span, top_list, :class => "top_list") do -%>
       <%= link_to top_list.title, top_list %> > 
