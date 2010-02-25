@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Lists: <%= controller.action_name %></title>
+<title>Chances4u</title>
 <!-- (en) Add your meta data here -->
 <%= stylesheet_link_tag 'layout_grids2.css' %>
 <%= javascript_include_tag :defaults %>
@@ -42,19 +42,20 @@
     <div id="main">
       <div class="subcolumns">
         <div class="c100l" role="main">
-          <div class="subcl maincontent">
+          <div class="subc maincontent">
             <%= yield %>
           </div>
         </div>
       </div>
     </div>
     <div id="footer" role="contentinfo">
-      <!-- <h2>Open your mind for flexibility! There is a world far beyond simple column-based web design ...</h2> -->
       <p>Layout inspired <a href="http://www.yaml.de"></a>by <a href="http://files.bjorkoy.com/blueprint/tests/parts/sample.html">sample website</a> from <a href="http://code.google.com/p/blueprintcss/">Blueprint CSS</a>
         <br />
         Rebuilt as an example, using grid elements of <a href="http://www.yaml.de/en/">YAML</a>
         <br />
         Build by <%= link_to "Medienwerkstatt neueZone", "http://werkstatt.neuezone.net" %>
+        <br />
+        Letzte Aktualisierung am <%=t (File.ctime __FILE__).to_date %>
       </p>
     </div>
   </div>

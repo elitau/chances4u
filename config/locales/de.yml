@@ -98,3 +98,7 @@ de:
         delimiter: ""
         precision: 1
   
+  actionmailer:
+    user_notifier:
+      reset_password:
+        subject: "Chances4u Reset your password"

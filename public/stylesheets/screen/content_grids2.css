@@ -70,7 +70,6 @@
 
   p { font-size: 1em; color: #444; line-height: 1.5em; margin: 1.5em 0; }
   p.small { font-size: 0.8333em; line-height: 1.8em; margin: 1.8em 0; }
-  #main p + p { text-indent: 2em; }
   #header .subcolumns p, .subcolumns .subcolumns p { margin-bottom: 0; padding-bottom: 1.5em;}
 
   .subcolumns .subcolumns p { text-indent: 0; margin-left: 0;}

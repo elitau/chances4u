@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     @current_user_session = UserSession.find
   end
   
+  def require_no_user
+    redirect_to home_path if current_user_session
+  end
+  
 end

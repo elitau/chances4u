@@ -3,11 +3,12 @@ Chances4u::Application.routes.draw do |map|
 
   match 'login' => 'user_sessions#new', :as => "login"
   match 'logout' => 'user_sessions#destroy', :as => "logout"
-
+  
   resources :users
   resources :user_sessions
   resources :entries
   resources :lists
+  resources :password_resets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
