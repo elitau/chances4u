@@ -1,0 +1,27 @@
+<%- content_for :top_columns do -%>
+  <div class="subcolumns">
+    <div class="c33l">
+      <div id="nav" class="subcl" role="navigation">
+        <h6> Navigation </h6>
+        <ul>
+          <li><%= link_to "Listen", lists_url %></a></li>
+          <li><%= link_to "Neuer Eintrag", new_entry_url %></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="c66r" role="complementary">
+      <div class="subcr">
+        <h3>Über <em>weitblick e.V.</em></h3>
+        <p>
+          Weitblick e.V. ist eine in Februar 2008 in Münster gegründete Studenteninitiative, die sich für einen weltweit gerechten Zugang zu Bildung engagiert, um soziale Verantwortung zu übernehmen und einen Beitrag zu einer nachhaltigen Entwicklungshilfe zu leisten.
+        </p>
+        <p>
+          Der gemeinnützige Verein ist nicht als Karriere-Netzwerk gedacht, stattdessen engagieren sich Studierende ehrenamtlich und eigenverantwortlich für lokale und internationale Hilfsprojekte. Hierzu gehören die Einschulung von Straßenkindern, die Vergabe von Mikrokrediten oder das Münsteraner Pilotprojekt, der Schulbau in Benin, Westafrika.
+        </p>
+      </div>
+    </div>
+  </div>
+<%- end -%>
+
+<h2><%= t(:entries_header, :scope => [:entries, :frontend] ) %></h2>
+<%= render :partial => "entries/entries_list" %>

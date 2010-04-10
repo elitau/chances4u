@@ -36,7 +36,7 @@
       <%- link_to root_url do -%>
         <h1>Studienberatung mit Weitblick </h1>
       <%- end -%>
-      <h2 class="notice"><%= notice || "Die etwas andere Berufsberatung, auch für zukünftige Auszubildende"%> </h2>
+      <%= info_message %>
     </div>
     <%= yield(:top_columns) %>
     <div id="main">

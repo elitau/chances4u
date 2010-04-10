@@ -1,9 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  username: MyString
-  email: MyString
-  password: MyString
+alumni:
+  username: Alumni
+  email: alumni@chances4u.org
   study_path: MyString
   study_place: MyString
   study_path_since: 2010-02-19
@@ -11,11 +10,14 @@ one:
   avatar_content_type: MyString
   avatar_file_size: 1
   avatar_updated_at: 2010-02-19 01:43:42
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("password" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  perishable_token: <%= Authlogic::Random.friendly_token %>
 
-two:
-  username: MyString
-  email: MyString
-  password: MyString
+student:
+  username: Student
+  email: student@chances4u.org
   study_path: MyString
   study_place: MyString
   study_path_since: 2010-02-19
@@ -23,3 +25,8 @@ two:
   avatar_content_type: MyString
   avatar_file_size: 1
   avatar_updated_at: 2010-02-19 01:43:42
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("password" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  perishable_token: <%= Authlogic::Random.friendly_token %>
+

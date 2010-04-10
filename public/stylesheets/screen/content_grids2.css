@@ -18,6 +18,19 @@
 
 @media all
 {
+	.notice {
+	  color: green;
+	}
+
+	.error {
+	  color: red;
+	}
+
+	
+	/* ============================== */
+	/* = FROM HERE COMES YAML STUFF = */
+	/* ============================== */	
+	
   /**
    * Fonts
    * (en) font-family and font-size selection for headings and standard text elements
@@ -187,5 +200,8 @@
     border:0;
     border-bottom: 2px #ddd solid;
   }
+
+
+
 }
 

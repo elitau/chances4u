@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserNotifierTest < ActionMailer::TestCase
-  test "reset_password" do
+  test "password_reset_instructions" do
     @expected.subject = "Reset password"
     @expected.to      = "to@example.org"
     @expected.from    = "from@example.com"

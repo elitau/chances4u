@@ -11,6 +11,7 @@ gem "rails", "3.0.0.beta"
 # Rails has selected sqlite3.
 # gem "sqlite3-ruby", :require => "sqlite3"
 gem "mysql"
+gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3"
 
 ## Bundle the gems you use:
 # gem "bj"
