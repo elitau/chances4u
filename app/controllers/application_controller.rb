@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
   def require_no_user
     redirect_to home_path if current_user_session
   end
+  
+  def restrict_access
+    redirect_to home_path unless current_user_session
+  end
 
   
 end

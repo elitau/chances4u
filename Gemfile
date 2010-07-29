@@ -13,6 +13,7 @@ gem "rails", "3.0.0.beta"
 gem "mysql"
 gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git", :branch => "rails3"
 
+
 ## Bundle the gems you use:
 # gem "bj"
 # gem "hpricot", "0.6"
